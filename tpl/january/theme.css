@@ -1,0 +1,84 @@
+.md {
+	/* color: #555;  */
+	color: rgb(119, 110, 110);
+	font-family: Consolas, Menlo; 
+	line-height: 1.5; 
+	letter-spacing: 2px;
+	font-size: 16px; 
+}
+
+.markdownIt-Anchor {
+	/* color: #BBB;  */
+	color: rgb(226, 216, 216);
+	text-decoration: none; 
+}
+
+hr {
+	height: 0;
+	border: none;
+	border-bottom: 1px solid #EEE;
+	width: 60%;
+	margin-bottom: 3em;
+	margin-left: auto; 
+	margin-right: auto; 
+
+	box-shadow: 0 15px 24px -14px rgba(0,0,0,.5);
+}
+
+.hljs {
+	position: relative;
+	line-height: 1.25; 
+	background-color: rgb(35, 38, 40);
+	color: rgb(204, 204, 204);
+	margin-bottom: 1em; 
+	margin-left: -1em; 
+	margin-right: -1em; 
+	padding: 12px 24px; 
+	border-radius: 2px;
+	overflow-x: auto;
+}
+
+code { font-family: Consolas, Menlo; }
+
+.hljs-keyword { color: rgb(204, 153, 204); }
+
+.hljs-attr, .hljs-attribute { color: rgb(255, 204, 102); }
+
+.hljs-string { color: rgb(153, 204, 153); }
+
+.hljs-comment { color: rgb(120, 120, 120); }
+
+.hljs-function, .hljs-selector-class { color: rgb(249, 145, 87); }
+
+.hljs-built_in { color: rgb(255, 204, 102); }
+
+.hljs-number { color: rgb(249, 145, 87); }
+
+.hljs-function .hljs-keyword { color: rgb(102, 153, 204); }
+
+.CSS .hljs-built_in { color: rgb(102, 153, 204);  }
+
+h1 {
+	margin-top: 1.5em; 
+	font-size: 150%; 
+}
+
+h2 {
+	font-size: 130%; 
+}
+
+h3 {
+	font-size: 115%; 
+}
+
+h4 {
+	font-size: 110%; 
+}
+
+h5, h6 {
+	font-size: 105%; 
+}
+
+p a {
+	color: rgb(125, 85, 85); 
+}
