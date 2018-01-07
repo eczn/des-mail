@@ -13,20 +13,19 @@ let transporter = nodemailer.createTransport({
 }); 
 
 /**
- * @description 发送邮件给 to 
- * @param {String} to 
- * @param {md} 文本
+ * @description 发送邮件
+ * @param {Object} mailOptions 
  * @returns {Promise<Object>} 结果 
  */
-function sender(to, subject, md){
+function sender(mailOptions){
 	// setup email data with unicode symbols
-	let mailOptions = {
-		from: '"desEczn 👻" <eczn@moebaka.com>', // sender address
-		to: to, // list of receivers
-		subject: subject, // Subject line
-		text: md, // plain text body
-		html: md // html body
-	};
+	// let mailOptions = {
+	// 	from: '"desEczn 👻" <eczn@moebaka.com>', // sender address
+	// 	to: to, // list of receivers
+	// 	subject: subject, // Subject line
+	// 	text: md, // plain text body
+	// 	html: md // html body
+	// };
 
 	// send mail with defined transport object
 	return new Promise((res, rej) => {
