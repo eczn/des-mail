@@ -30,6 +30,9 @@ function mix(file, theme = 'undefined'){
 
     // CSS Render 
     let css = fs.readFileSync(inTheTheme('theme.css')).toString();
+    let info = JSON.parse(
+        fs.readFileSync(inTheTheme('info.json')).toString()
+    );
     let addCss = cssRender(css);
 
     // Tpl Render 
@@ -42,7 +45,7 @@ function mix(file, theme = 'undefined'){
     
     // Mixed 
     let html = readAndRender(file); 
-    let after = addCss(tplRender({ html })); 
+    let after = addCss(tplRender({ html, info })); 
 
     return after; 
 }
