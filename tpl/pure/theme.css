@@ -22,8 +22,8 @@ p > a {
 }
 
 p {
-    letter-spacing: 3px;
-    line-height: 1.9; 
+    letter-spacing: 2px;
+    line-height: 2; 
     text-indent: 2em; 
     color: #666; 
 }
