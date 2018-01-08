@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "send emial from markdown",
   "main": "index.js",
+  "bin": {
+    "dmail": "./cmd/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -26,5 +29,6 @@
     "ramda": "^0.25.0",
     "then-fs": "^2.0.0",
     "tplser": "^0.2.1"
-  }
+  },
+  "repository": "https://github.com/eczn/des-mail.git"
 }
