@@ -10,7 +10,6 @@ let md = require('markdown-it')({
 	highlight: function (str, lang) {
 		lang = alias(lang); 
 
-
 		return '<pre class="hljs"><code>' + hljs.highlight(lang, str, true).value + '</code></pre>';
 	},
 	html: true,
@@ -30,8 +29,8 @@ md.use(require('markdown-it-table-of-contents'));
 
 var implicitFigures = require('markdown-it-implicit-figures');
 md.use(implicitFigures, {
-  dataType: false,  // <figure data-type="image">, default: false 
-  figcaption: true  // <figcaption>alternative text</figcaption>, default: false 
+	dataType: false,  // <figure data-type="image">, default: false 
+	figcaption: true  // <figcaption>alternative text</figcaption>, default: false 
 });
 
 module.exports = md; 
