@@ -23,7 +23,7 @@ let inThe = base => file => path.join(base, file);
  * @param {String} file
  * @param {String} theme
  */
-function mix(file, theme){
+function mix(file, theme = 'undefined'){
     // Theme Base 
     let themeBase = path.join(__dirname, theme); 
     let inTheTheme = inThe(themeBase); 
