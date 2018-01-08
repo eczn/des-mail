@@ -27,6 +27,7 @@
     "markdown-it-toc-and-anchor": "^4.1.2",
     "nodemailer": "^4.4.1",
     "ramda": "^0.25.0",
+    "requirefresh": "^2.1.0",
     "then-fs": "^2.0.0",
     "tplser": "^0.2.1"
   },

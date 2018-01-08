@@ -5,6 +5,7 @@ const md = require('../md')
     , cssRender = require('../css-render')
     , _ = require('ramda')
     , tpl = require('tplser')
+    , requireFresh = require('requirefresh')
 
 
 let readAndRender = _.pipe(
@@ -33,6 +34,12 @@ function mix(file, theme = 'undefined'){
     let info = JSON.parse(
         fs.readFileSync(inTheTheme('info.json')).toString()
     );
+    let helper = {}; 
+    try {
+        helper = requireFresh(inTheTheme('helper.js')); 
+    } catch (e){
+        console.log(`[ Error ] when require ${ theme }/helper.js`); 
+    }
     let addCss = cssRender(css);
 
     // Tpl Render 
@@ -45,7 +52,11 @@ function mix(file, theme = 'undefined'){
     
     // Mixed 
     let html = readAndRender(file); 
-    let after = addCss(tplRender({ html, info })); 
+    let after = addCss(tplRender({
+        html,
+        info,
+        _: typeof helper == 'function' ? helper() : helper
+    })); 
 
     return after; 
 }
