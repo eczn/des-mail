@@ -7,7 +7,7 @@ h5 { font-size: 100%; }
 h6 { font-size: 100%; }
 
 .md {
-    color: #555; 
+    font-family: 'Noto Sans CJK SC', 'Source Han Sans', 'Source Han Sans CN', 'Helvetica Neue', Helvetica, 'Han Heiti', '微软雅黑', '黑体', sans-serif;
 }
 
 .markdownIt-Anchor {
@@ -22,15 +22,18 @@ p > a {
 }
 
 p {
-    letter-spacing: 1px;
-    line-height: 1.5; 
+    letter-spacing: 3px;
+    line-height: 1.9; 
     text-indent: 2em; 
+    color: #666; 
 }
 
 h1 {
     text-align: center; 
     margin-top: 4em; 
     margin-bottom: 1em; 
+    letter-spacing: 3px;
+    color: #666; 
 }
 
 .top {
