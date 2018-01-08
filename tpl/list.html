@@ -5,13 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>List</title>
+    <style>
+        * {
+            margin: 0; 
+            padding: 0; 
+        }
+
+        body {
+            color: #555; 
+            max-width: 700px; 
+            margin: 0 auto; 
+        }
+
+        h1 {
+            margin-bottom: 1em; 
+        }
+
+        a {
+            font-size: 18px; 
+            color: rgb(92, 87, 87); 
+        }
+
+        ul {
+            margin-left: 2em; 
+        }
+    </style>
 </head>
 <body>
     <h1>列表</h1>
+    <ul>
     {{ get (item, idx) >>>> list }}
-    
-    <a href="/themes/{{ item.theme }}.html">{{ item.theme }}</a>
-
+    <li>
+        <a href="/themes/{{ item.theme }}.html">{{ item.theme }}</a>
+    </li>
     {{ teg }}
+    </ul>
 </body>
 </html>
