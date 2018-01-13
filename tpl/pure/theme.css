@@ -10,6 +10,11 @@ h6 { font-size: 100%; }
     font-family: 'Noto Sans CJK SC', 'Source Han Sans', 'Source Han Sans CN', 'Helvetica Neue', Helvetica, 'Han Heiti', '微软雅黑', '黑体', sans-serif;
 }
 
+.md {
+    max-width: 700px;
+    margin: 0 auto; 
+}
+
 .markdownIt-Anchor {
     display: none; 
     opacity: 0; 
@@ -22,6 +27,7 @@ p > a {
 }
 
 p {
+    text-align: justify;
     letter-spacing: 2px;
     line-height: 2; 
     text-indent: 2em; 
