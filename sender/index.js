@@ -26,7 +26,7 @@ function sender(mailOptions){
 
 	let todos = []; 
 
-	$('img').each((idx, elem) => {
+	$('img, image-for-upload').each((idx, elem) => {
 		let URL_BASE = $(elem).attr('src'); 
 		let FILE_LOCALTION = path.join(mailBase, URL_BASE);
 		let LOCAL_FILE = path.parse(FILE_LOCALTION); 
@@ -41,6 +41,8 @@ function sender(mailOptions){
 		
 		todos.push(thisImg);
 	}); 
+
+	$('image-for-upload').remove();
 
 	return Promise.all(todos).then(all_upload_success => {
 		mailOptions.html = $('body').html();
