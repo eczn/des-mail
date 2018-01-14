@@ -1,0 +1,58 @@
+/* created by des-mail cli */
+
+.markdownIt-Anchor {
+    display: none; 
+    opacity: 0; 
+}
+
+.bgs-pedding {
+    position: relative; 
+    overflow: hidden; 
+}
+
+.bgs {
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    overflow: hidden; 
+    text-align: center; 
+    background-repeat: no-repeat; 
+    font-size: 0; 
+    margin-bottom: 2em; 
+}
+
+.bgs-img {
+    display: inline-block; 
+    width: 33.3%;
+    padding-top: 33.3%; 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.test {
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 2; 
+    text-indent: 2em; 
+    color: #666; 
+}
+
+h1 {
+    
+    text-align: center; 
+    margin-top: 4em; 
+    margin-bottom: 1em; 
+    letter-spacing: 3px;
+    color: #666; 
+}
+
+.footer {
+    border-top: 1px solid #DDD; 
+}
+
+.footer-p {
+    text-align: center; 
+    color: #555; 
+    
+}
