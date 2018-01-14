@@ -9,6 +9,7 @@ const gulp = require('gulp')
     , mkdir = require('../mkdir')
     , _ = require('ramda')
     , fs = require('then-fs')
+    , CONFIG = require('../../config')
 
 // mkdir dir 
 mkdir(WWW_BASE); 
@@ -95,7 +96,7 @@ gulp.task('reload', function(){
 
 function serverInit(){
     connect.server({
-        root: WWW_BASE,
+        root: [WWW_BASE, CONFIG.mailBase],
         port: 4455,
         livereload: true
     });
