@@ -9,10 +9,17 @@
 const path = require('path')
 
 module.exports = {
-    tpl: path.join(__dirname, './tpl'), 
+    mailBase: 'path/to/my/mails', 
+    imgPool:  'path/to/my/mails/images', 
     auth: {
-        user: 'abc@def.com', 
-        pass: '******'
+        user: 'xxxx@qq.com', 
+        pass: '*******'
+    },
+    qiniu: {
+        ACCESS_KEY: '****************************************',
+        SECRET_KEY: '****************************************',
+        bucket: 'my_bucket',
+        bucket_domain: 'http://aabbcc.bkt.clouddn.com'
     }
 }
 ```
@@ -66,6 +73,16 @@ $ gulp serve
 打开后，就可以看主题效果了 
 
 如果自己想要写主题，得去 tpl 下创建文件夹，更多详情请对照 january 进行编写。 
+
+你也可以使用 des-mial cli 去快速建立一个模板 
+
+``` js
+# 去项目根目录 
+$ npm link 
+$ dmial new my-theme 
+```
+
+创建好之后会在 tpl 下创建好对应的空主题
 
 此外，由于大多数的邮件客户端不支持 link style 这些 css 引入标签，只支持内联写法；
 
