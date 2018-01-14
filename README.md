@@ -1,4 +1,4 @@
-就发邮件 
+就发邮件: `自定义主题`, `模板`, `Markdown 书写`, `实时预览`, `图片自动上传`
 
 # config.js 
 
@@ -89,6 +89,22 @@ $ dmial new my-theme
 为了让 CSS 生效，我写了个 CSS 解释器，将 CSS 以内联方式嵌入到 HTML 里，因此很多选择器的支持度不太好，而且样式之间的覆盖问题比较严重，因此样式复杂度上去了可能会引起很多问题，建议编写简单的样式布局。 
 
 此外，des-mail 使用的模板引擎是我自写的 `tplser` 。。。。 屎味较大。。。 嗯。。。 
+
+## 怎么弄一键图片上传的 
+
+config.js 里得写好 mailBase 字段，里面的文件夹均会映射到 markdown 书写的图片地址里： 
+
+比如 我 markdown 写: 
+
+``` markdown 
+![test](/images/test.jpg)
+```
+
+这张图片就指向 mailBase 里 images 文件夹下的 test.jpg 图片。 
+
+( 具体实现在 build/server 里, (connect 的 multiserver) )
+
+然后在发送的时候，也无须做什么， sender 会自动的吧 img 标签的图片取出来上传，并替换成在七牛的 url 。 
 
 # 建设中
 
