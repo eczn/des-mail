@@ -15,6 +15,8 @@ const gulp = require('gulp')
 mkdir(WWW_BASE); 
 mkdir(path.join(WWW_BASE, 'themes')); 
 
+process.env.DES_MAIL_SERVER = true; 
+
 let HTMLS = () => mix.themeList.then(l => {
     let file = join('tpl/test.md'); 
 
