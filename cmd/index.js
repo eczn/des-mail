@@ -33,6 +33,9 @@ let todos = {
 					}, {
 						name: 'info.json', 
 						data: `{\n\t"name": "${newWhat}"\n}`
+					}, {
+						name: 'helper.js', 
+						data: `// Add Your Personal Helper Function \nmodule.exports = {}\n`
 					}
 				].map(({name, data}) => {
 					let target = path.join(NEW_THEME_BASE, name); 
