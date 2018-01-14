@@ -77,3 +77,7 @@ pusher.uploadFile = uploadFile;
 pusher.getDownUrl = function(key){
 	return bucketManager.publicDownloadUrl(bucket_domain, key); 
 }
+
+pusher.fromCache = function(key){
+	return list.find(key); 
+}
