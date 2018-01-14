@@ -6,6 +6,7 @@ const md = require('../md')
     , _ = require('ramda')
     , tpl = require('tplser')
     , requireFresh = require('requirefresh')
+    , ctx = require('./ctx')
 
 
 let readAndRender = _.pipe(
@@ -55,7 +56,8 @@ function mix(file, theme = 'undefined'){
     let after = addCss(tplRender({
         html,
         info,
-        _: typeof helper == 'function' ? helper() : helper
+        _: typeof helper == 'function' ? helper(ctx) : helper,
+        ctx
     })); 
 
     return after; 
